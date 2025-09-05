@@ -21,6 +21,19 @@ public: // интерфейс объекта
         x = _x;
         y = _y;
     }
+    void Sum(Point b)
+    {
+        cout << "X: " << x + b.x << "\tY: " << y + b.y << endl;
+    }
+    void Min(Point b)
+    {
+        cout << "X: " << x - b.x << "\tY: " << y - b.y << endl;
+    }
+    void Mul(Point b)
+    {
+        cout << "X: " << x * b.x << "\tY: " << y * b.y << endl;
+    }
+
 };
 int main() // клент
 {
@@ -32,4 +45,8 @@ int main() // клент
 
     b.Init('B', 5, 16);
     b.Print();
+
+    a.Sum(b);
+    a.Min(b);
+    a.Mul(b);
 }
